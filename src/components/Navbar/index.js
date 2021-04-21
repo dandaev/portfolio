@@ -25,14 +25,25 @@ const Navbar = ({toggle}) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">About</NavLinks>
+                            <NavLinks to="about">ABOUT</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="portfolio">Portfolio</NavLinks>
+                            <NavLinks to="portfolio">PORTFOLIO</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="erfahrung">Erfahrung</NavLinks>
+                            <NavLinks to="erfahrung">ERFAHRUNG</NavLinks>
                         </NavItem>
+                        {/* <NavSocialNetBar>
+                            <NavSocialNetItem>
+
+                            </NavSocialNetItem>
+                            <NavSocialNetItem>
+                                
+                            </NavSocialNetItem>
+                            <NavSocialNetItem>
+                                
+                            </NavSocialNetItem>
+                        </NavSocialNetBar> */}
                     </NavMenu>
                     <NavBtn>
                         <NavBtnLink to="/">Contat Me</NavBtnLink>
