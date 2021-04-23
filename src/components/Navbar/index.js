@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaBars} from 'react-icons/fa'
+import {FaBars, FaLinkedin, FaGithub} from 'react-icons/fa'
 import {
     Nav, 
     NavbarContainer, 
@@ -8,8 +8,10 @@ import {
     NavMenu, 
     NavItem, 
     NavLinks,
-    NavBtn,
-    NavBtnLink
+    // NavBtn,
+    // NavBtnLink,
+    NavSocialNetItem,
+    NavSocialNetBar
 } from './NavBarElements'
 
 const Navbar = ({toggle}) => {
@@ -33,21 +35,21 @@ const Navbar = ({toggle}) => {
                         <NavItem>
                             <NavLinks to="erfahrung">ERFAHRUNG</NavLinks>
                         </NavItem>
-                        {/* <NavSocialNetBar>
-                            <NavSocialNetItem>
-
-                            </NavSocialNetItem>
-                            <NavSocialNetItem>
-                                
-                            </NavSocialNetItem>
-                            <NavSocialNetItem>
-                                
-                            </NavSocialNetItem>
-                        </NavSocialNetBar> */}
                     </NavMenu>
-                    <NavBtn>
+                    <NavSocialNetBar>
+                            <NavSocialNetItem>
+                                <NavLinks to='/www.linkedin.com/in/alybek-dandaev-322482207/'><FaLinkedin/></NavLinks>
+                            </NavSocialNetItem>
+                            <NavSocialNetItem>
+                                <NavLinks to="portfolio"><FaGithub/></NavLinks>
+                            </NavSocialNetItem>
+                            <NavSocialNetItem>
+                                
+                            </NavSocialNetItem>
+                        </NavSocialNetBar>
+                    {/* <NavBtn>
                         <NavBtnLink to="/">Contat Me</NavBtnLink>
-                    </NavBtn>
+                    </NavBtn> */}
                 </NavbarContainer>
             </Nav>
         </>

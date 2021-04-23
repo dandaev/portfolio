@@ -86,6 +86,11 @@ export const NavLinks = styled(LinkS)`
     &.active{
         border-bottom: 3px solid #01bf71;
     }
+
+    &:hover{
+        transition: all 0.3s ease-in-out;
+        color: #d4b8b6;
+    }
 `;
 
 export const NavBtn = styled.nav`
@@ -115,4 +120,19 @@ export const NavBtnLink = styled(LinkR)`
         background: #fff;
         color: #010606;
     }
+`;
+
+export const NavSocialNetBar = styled.ul`
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+`;
+
+export const NavSocialNetItem = styled.li`
+    height: 80px;
 `;
