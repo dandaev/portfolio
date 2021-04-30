@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {FaBars, FaLinkedin, FaGithub} from 'react-icons/fa'
+import {animateScroll as scroll} from 'react-scroll'
 import {
     Nav, 
     NavbarContainer, 
@@ -11,15 +12,34 @@ import {
     // NavBtn,
     // NavBtnLink,
     NavSocialNetItem,
-    NavSocialNetBar
+    NavSocialNetBar,
+    NavResouce
 } from './NavBarElements'
 
 const Navbar = ({toggle}) => {
+    const[scrollNav, setScrollNav] = useState(false)
+
+    const changeNav = () =>{
+        if(window.scrollY >= 80){
+            setScrollNav(true)
+        }
+        else {
+            setScrollNav(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    }, [])
+
+    const toggleHome = () =>{
+        scroll.scrollToTop();
+    }
     return (
         <>
-            <Nav>
+            <Nav scrollNav = {scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/">
+                    <NavLogo onClick={toggleHome}>
                         Alybek.
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
@@ -27,21 +47,36 @@ const Navbar = ({toggle}) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">ABOUT</NavLinks>
+                            <NavLinks to='aboutme' 
+                            smooth = {true}
+                            duration={500}
+                            spy={true}
+                            exact = 'true'
+                            offset={-80}>ABOUTME</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="portfolio">PORTFOLIO</NavLinks>
+                            <NavLinks to="portfolio"
+                            smooth = {true}
+                            duration={500}
+                            spy={true}
+                            exact = 'true'
+                            offset={-80}>PORTFOLIO</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="erfahrung">ERFAHRUNG</NavLinks>
+                            <NavLinks to="erfahrung"
+                            smooth = {true}
+                            duration={500}
+                            spy={true}
+                            exact = 'true'
+                            offset={-80}>ERFAHRUNG</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavSocialNetBar>
                             <NavSocialNetItem>
-                                <NavLinks to='/www.linkedin.com/in/alybek-dandaev-322482207/'><FaLinkedin/></NavLinks>
+                                <NavResouce href='https://www.linkedin.com/in/alybek-dandaev-322482207/' target='_blank'><FaLinkedin/></NavResouce>
                             </NavSocialNetItem>
                             <NavSocialNetItem>
-                                <NavLinks to="portfolio"><FaGithub/></NavLinks>
+                                <NavResouce href='https://github.com/dandaev' target='_blank'><FaGithub/></NavResouce>
                             </NavSocialNetItem>
                             <NavSocialNetItem>
                                 

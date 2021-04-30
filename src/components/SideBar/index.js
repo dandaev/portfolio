@@ -17,18 +17,36 @@ const SideBar = ({isOpen, toggle}) => {
             </Icon>
             <SideBarWrapper>
                 <SideBarMenu>
-                    <SideBarLink to="about" onClick={toggle}>
+                    <SideBarLink to="aboutme" 
+                    smooth = {true}
+                    duration={500}
+                    spy={true}
+                    exact = 'true'
+                    offset={-80}
+                    onClick={toggle}>
                         About
                     </SideBarLink>
-                    <SideBarLink to="portfolio" onClick={toggle}>
+                    <SideBarLink to="portfolio" 
+                    smooth = {true}
+                    duration={500}
+                    spy={true}
+                    exact = 'true'
+                    offset={-80}
+                    onClick={toggle}>
                         Portfolio
                     </SideBarLink>
-                    <SideBarLink to="erfahrung" onClick={toggle}>
+                    <SideBarLink to="erfahrung" 
+                    smooth = {true}
+                    duration={500}
+                    spy={true}
+                    exact = 'true'
+                    offset={-80}
+                    onClick={toggle}>
                         Erfahrung
                     </SideBarLink>
                 </SideBarMenu>
                 <SideBtnWrap>
-                    <SideBarRoute to="/contactme">Contact Me</SideBarRoute>
+                    <SideBarRoute to="youtube.com">Contact Me</SideBarRoute>
                 </SideBtnWrap>
             </SideBarWrapper>
         </SideBarContainer>

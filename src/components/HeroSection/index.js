@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Video from '../../videos/dark.mp4';
 import {Button} from '../ButtonElements';
-import Typing from 'react-typing-animation';
+// import Typing from 'react-typing-animation';
 import {
     HeroContainer, 
     HeroBg, 
@@ -23,7 +23,7 @@ const HeroSection = () => {
     }
 
     return (
-        <HeroContainer>
+        <HeroContainer id='home'>
             <HeroBg>
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
             </HeroBg>
@@ -54,7 +54,14 @@ const HeroSection = () => {
                     Ich studiere an der WHZ
                 </HeroText>
                 <HeroBtnWrapper>
-                    <Button to='about' onMouseEnter={onHover} onMouseLeave={onHover}>
+                    <Button to='aboutme' 
+                    smooth = {true}
+                    duration={500}
+                    spy={true}
+                    exact = 'true'
+                    offset={-77}
+                    onMouseEnter={onHover} 
+                    onMouseLeave={onHover}>
                     About Me {hover ? <ArrowDownward/> : <ArrowDown/>}
                     </Button>
                 </HeroBtnWrapper>
