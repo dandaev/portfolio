@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import {Link as LinkR} from "react-router-dom"
 import {Link as LinkS} from "react-scroll"
+import Logo from '../../images/logo.svg'
 
 export const Nav = styled.nav`
     background: ${({scrollNav}) => (scrollNav ? '#000':'transparent')};
@@ -12,10 +13,15 @@ export const Nav = styled.nav`
     font-size: 1rem;
     position: sticky;
     top: 0;
+    /* left: 0;
+    width: 100vw; */
     z-index: 10;
     font-family: 'IBM Plex Sans';
     font-size: 20px;
-    border-bottom: ${({scrollNav}) => (scrollNav ? '3px solid #555555':'0')};
+    /* border-bottom: ${({scrollNav}) => (scrollNav ? '3px solid #555555':'0')}; */
+    box-shadow: ${({scrollNav}) => (scrollNav ? '0 21px 17px -6px rgba(119, 127, 141, 0.41)':'none')};
+        
+
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
     }
@@ -150,4 +156,13 @@ export const NavSocialNetBar = styled.ul`
 
 export const NavSocialNetItem = styled.li`
     height: 80px;
+`;
+
+export const LogoImg = styled.div`
+    background-image: url(${Logo});
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:transparent;
+    height: 80px;
+    width: 120px;
 `;

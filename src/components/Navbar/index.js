@@ -13,7 +13,8 @@ import {
     // NavBtnLink,
     NavSocialNetItem,
     NavSocialNetBar,
-    NavResouce
+    NavResouce,
+    LogoImg
 } from './NavBarElements'
 
 const Navbar = ({toggle}) => {
@@ -41,6 +42,7 @@ const Navbar = ({toggle}) => {
                 <NavbarContainer>
                     <NavLogo onClick={toggleHome}>
                         Alybek.
+                        {/* <LogoImg></LogoImg> */}
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars size="32" />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../ButtonElements'
-import image from '../../images/small_size.jpg'
+import image from '../../images/hackerMan.png'
 import { 
     AboutMeContainer, 
     AboutMeWrapper, 
@@ -38,7 +38,7 @@ const AboutMeSection = () => {
                         </Column1>
                         <Column2>
                             <ImgWrapper>
-                                <Img src={image} alt="Photo1" />
+                                {/* <Img src={image} alt="Photo1" /> */}
                             </ImgWrapper>
                         </Column2>
                     </AboutMeRow>

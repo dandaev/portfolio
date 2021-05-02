@@ -1,8 +1,11 @@
 import styled from 'styled-components'
+import BgImage from '../../images/aboutMeContainer.svg'
 
 export const AboutMeContainer = styled.div`
     color: #fff;
-    background:  #515151;
+    background:  rgba(52,53,64,95%);
+    background-image: url(${BgImage});
+    background-repeat: no-repeat;
 
     @media screen and (max-width: 768px){
         padding:100px 0;
@@ -14,10 +17,10 @@ export const AboutMeWrapper = styled.div`
     z-index: 1;
     height: 860px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 100vw;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 24px;
+    padding: 0 24;
     justify-content: center;
 `;
 

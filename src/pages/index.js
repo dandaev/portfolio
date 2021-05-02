@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection'
 import Navbar from '../components/Navbar'
 import PortfolioSection from '../components/PortfolioSection'
 import SideBar from '../components/SideBar'
+import { SvgBg } from './PagesElements'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -15,6 +16,7 @@ const Home = () => {
 
     return (
         <>
+            <SvgBg/>
             <SideBar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle}/>
             <HeroSection/>

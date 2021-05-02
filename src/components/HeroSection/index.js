@@ -1,17 +1,15 @@
 import React, {useState} from 'react'
-import Video from '../../videos/dark.mp4';
-import {Button} from '../ButtonElements';
-// import Typing from 'react-typing-animation';
+import image from '../../images/hackerMan.png'
 import {
     HeroContainer, 
-    HeroBg, 
-    VideoBg, 
     HeroContent, 
     HeroH1, 
     HeroBtnWrapper, 
-    HeroText,
-    ArrowDown,
-    ArrowDownward,
+    HeroImgWrapper,
+    HeroImg,
+    Arrow,
+    AnimArrow,
+    ArrowText,
 } from "./HeroElements"
 
 
@@ -24,9 +22,6 @@ const HeroSection = () => {
 
     return (
         <HeroContainer id='home'>
-            <HeroBg>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
-            </HeroBg>
             <HeroContent>
                 <HeroH1>
                     Hallo
@@ -50,11 +45,24 @@ const HeroSection = () => {
                             <Typing.Backspace count={8} />
                         </Typing> */}
                 </HeroH1>
-                <HeroText>
-                    Ich studiere an der WHZ
-                </HeroText>
-                <HeroBtnWrapper>
-                    <Button to='aboutme' 
+                <HeroImgWrapper>
+                    <HeroImg src={image} alt="HeroPhoto"/>
+                </HeroImgWrapper>
+                
+            </HeroContent>
+            <HeroBtnWrapper>
+                    <AnimArrow to='aboutme'
+                    smooth = {true}
+                    duration={500}
+                    spy={true}
+                    exact = 'true'
+                    offset={-77}>
+                        <Arrow/>
+                        <Arrow/>
+                        <Arrow/>
+                        <ArrowText>About me</ArrowText> 
+                    </AnimArrow>
+                    {/* <Button to='aboutme' 
                     smooth = {true}
                     duration={500}
                     spy={true}
@@ -63,9 +71,8 @@ const HeroSection = () => {
                     onMouseEnter={onHover} 
                     onMouseLeave={onHover}>
                     About Me {hover ? <ArrowDownward/> : <ArrowDown/>}
-                    </Button>
+                    </Button> */}
                 </HeroBtnWrapper>
-            </HeroContent>
         </HeroContainer>
     )
 }
