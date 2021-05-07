@@ -5,22 +5,20 @@ import Logo from '../../images/logo.svg'
 
 export const Nav = styled.nav`
     background: ${({scrollNav}) => (scrollNav ? '#000':'transparent')};
+    /* height: ${({scrollNav}) => (scrollNav ? '60px':'80px')}; */
     height: 80px;
-    /* margin-top: --80px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     font-size: 1rem;
-    position: sticky;
+    position: fixed;
     top: 0;
-    /* left: 0;
-    width: 100vw; */
     z-index: 10;
     font-family: 'IBM Plex Sans';
+    /* font-size: ${({scrollNav}) => (scrollNav ? '18px':'20px')}; */
     font-size: 20px;
-    /* border-bottom: ${({scrollNav}) => (scrollNav ? '3px solid #555555':'0')}; */
-    box-shadow: ${({scrollNav}) => (scrollNav ? '0 21px 17px -6px rgba(119, 127, 141, 0.41)':'none')};
-        
+    box-shadow: ${({scrollNav}) => (scrollNav ? '0 10px 17px rgba(0, 0, 0, 0.49)':'none')};
 
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
@@ -58,7 +56,7 @@ export const MobileIcon = styled.div`
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        font-size: 1,8rem;
+        font-size: 1.8rem;
         cursor: pointer;
         color: #fff;
     }
@@ -90,12 +88,13 @@ export const NavLinks = styled(LinkS)`
     cursor: pointer;
 
     &.active{
-        border-bottom: 3px solid #d4b8b6;
+        height: 100%;
+        border-bottom: 3px solid #B6B3ED;
     }
 
     &:hover{
         transition: all 0.3s ease-in-out;
-        color: #d4b8b6;
+        color: #B6B3ED;
     }
 `;
 
@@ -110,7 +109,7 @@ export const NavResouce = styled.a`
     
     &:hover{
         transition: all 0.3s ease-in-out;
-        color: #d4b8b6;
+        color: #B6B3ED;
     }
 `;
 

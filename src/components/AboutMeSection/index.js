@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../ButtonElements'
-import image from '../../images/hackerMan.png'
+import image from '../../images/NormZwickau-HighResolution.jpg'
 import { 
     AboutMeContainer, 
     AboutMeWrapper, 
@@ -29,7 +29,9 @@ const AboutMeSection = () => {
                                 </TitleLine>
                                 <Heading> Heading </Heading>
                                 <TextLine>
-                                    TextLine
+                                    Nunquam fallere idoleum.
+                                    To the ripe caviar add onion, butter, orange juice and quartered squid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
+                                    aperiam architecto, aut autem blanditiis consequatur consequuntur dolor illum minima non quia quidem quisquam repellendus sunt tenetur vel, velit, vero?
                                 </TextLine>
                                 <AboutMeBtnWrapper>
                                     <Button to='home'>Button</Button>
@@ -38,7 +40,7 @@ const AboutMeSection = () => {
                         </Column1>
                         <Column2>
                             <ImgWrapper>
-                                {/* <Img src={image} alt="Photo1" /> */}
+                                 <Img src={image}/>
                             </ImgWrapper>
                         </Column2>
                     </AboutMeRow>

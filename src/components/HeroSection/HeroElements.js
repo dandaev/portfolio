@@ -1,34 +1,44 @@
 import styled from 'styled-components';
 import {Link} from 'react-scroll';
-import {MdKeyboardArrowDown, MdArrowDownward} from 'react-icons/md'
 
 export const HeroContainer = styled.div`
     background: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0 px;
-    height: 867px;
+    padding: 0;
+    height: 100vh;
     z-index: 1; 
     background-color:transparent;
     /* Add : before */
 `;
 export const HeroContent = styled.div`
-    z-index: 3;
     max-width: 1200px;
     position: absolute;
+    left: 50%;
+    top: 35%;
+    right: 50%;
+    bottom: 65%;
+    transform: translate(-50%, -50%);
     padding: 8px 24px;
+    margin-bottom: 186px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: -4;
+    @media screen and (max-width: 768px){
+        margin-bottom: 500px;
+    }
 `;
 
 export const HeroH1 = styled.h1`
-    color: rgba(230,213,213,.2);
-    font-size: 80px;
+    color: rgba(104,107,136);
+    font-size: 60px;
     text-align: center;
     mix-blend-mode: overlay;
-
+    display: flex;
+    white-space: nowrap;
+    
     @media screen and (max-width: 768px){
         font-size: 40px;
     }
@@ -39,8 +49,24 @@ export const HeroH1 = styled.h1`
 `;
 
 export const HeroImgWrapper = styled.div`
-    max-width: 555px;
-    height: 100%;
+    max-width: 10vw;
+    height: 10vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    img:nth-child(1){
+        animation-delay:0s;
+    }
+    img:nth-child(2){
+        animation-delay:2s;
+    }
+    /* img:nth-child(3){
+        animation-delay:2s;
+    }
+    img:nth-child(4){
+        animation-delay:3s;
+    } */
 `;
 
 export const HeroImg = styled.img`
@@ -49,16 +75,31 @@ export const HeroImg = styled.img`
     margin-right: auto;
     margin-bottom: 70px;
     display: block;
+    animation: cf4FadeInOut 2s ease-in-out infinite alternate-reverse; 
 
     @media screen and (max-width: 968px){
         width: 75%;
     }
 
+    @keyframes cf4FadeInOut {
+        0% {
+            opacity:1;
+        }
+        /* 33% {
+            opacity:0;
+        }
+        66% {
+            opacity:0;
+        } */
+        100% {
+            opacity:0;
+        }
+}
 
 `;
 
 export const HeroBtnWrapper = styled.div`
-    display: flex;
+    display: ${({scrollNav}) => (scrollNav ? 'none':'flex')};;
     width:50px;
     height:auto;
     left:50%;
@@ -67,6 +108,7 @@ export const HeroBtnWrapper = styled.div`
     bottom: 69px;
     flex-direction: column;
     align-items: center;
+    z-index: -1;
      /* @media screen and (max-width: 480px){
         width:25px;
     }  */
@@ -77,6 +119,7 @@ export const AnimArrow = styled(Link)`
     width: 100%;
     left:50%;
     width:100%;
+    z-index: -1;
     transform: translate(-50%,-50%);
     span:nth-child(2){
         animation-delay: -0.4s;
@@ -96,6 +139,7 @@ export const Arrow = styled.span`
     transform: rotate(45deg);
     margin: 0 auto -10px auto;
     animation: arrowdown 3s infinite;
+    z-index: -1;
 
     @keyframes arrowdown{
         0%{
