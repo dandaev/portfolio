@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="947" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 947" 
+style="z-index:1;margin-right:-2px;display:block;background-repeat-y:initial;background-repeat-x:initial;background: rgb(122,125,157);
+background: linear-gradient(0deg, rgba(122,125,157,1) 0%, rgba(43,44,54,0.9864320728291317) 69%);animation-play-state:running" >
+
+<style>
+        @keyframes ld-speed-dash {
+            from{
+                r: 0;
+            }to{
+                r: 18;
+                stroke: transparent;
+            }
+        }
+        .ld.ld-speed-dash {
+            animation: ld-speed-dash 1.5s linear infinite;
+            
+        }
+</style>
+<g transform="translate(960,473.5) scale(1,1) translate(-960,-473.5)" style="transform:matrix(1, 0, 0, 1, 0, 0);animation-play-state:running" >
+<circle class="ld ld-speed-dash" cx="1598.2861292847354" cy="249.83944719724198" r="0" fill="none" stroke="#E0F1F0" stroke-width="1" opacity="1" style="animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="858.7070948612186" cy="303.7013282788009" r="0.9758160710334778" fill="none" stroke="#eabe7c" stroke-width="1" opacity="0.95" style="opacity:0.95;animation-delay: 1.2s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1190.1597551784569" cy="290.6958874453647" r="1.6139510869979858" fill="none" stroke="#816f53" stroke-width="1" opacity="0.9" style="opacity:0.9;animation-delay: 0.2s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="279.7221177653301" cy="172.6616459569462" r="1.9422852993011475" fill="none" stroke="#ABA9BB" stroke-width="1" opacity="0.85" style="opacity:0.85;animation-delay: 1.9s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="505.3967659772296" cy="234.1632370896825" r="3.0874783992767334" fill="none" stroke="#E0F1F0" stroke-width="1" opacity="0.8" style="opacity:0.8;animation-delay: 2.1s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1293.1461702900729" cy="16.7799898950957" r="4.763875484466553" fill="none" stroke="#322923" stroke-width="1" opacity="0.75" style="opacity:0.75;animation-delay: 2.3s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1375.2041659695892" cy="346.5999261595794" r="4.4654059410095215" fill="none" stroke="#816f53" stroke-width="1" opacity="0.7" style="opacity:0.7;animation-delay: 0.4s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1472.6791368549666" cy="264.4938969398621" r="6.047792434692383" fill="none" stroke="#ABA9BB" stroke-width="1" opacity="0.65" style="opacity:0.65;animation-delay: 0.6s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="830.1695326784832" cy="80.0081894293496" r="6.576551914215088" fill="none" stroke="#cdb590" stroke-width="1" opacity="0.6" style="opacity:0.6;animation-delay: 1.3s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1771.7803874674046" cy="178.2218876742895" r="6.563713550567627" fill="none" stroke="#ABA9BB" stroke-width="1" opacity="0.55" style="opacity:0.55;animation-delay: 0.8s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="119.29193760186733" cy="135.8178589164403" r="5.948205471038818" fill="none" stroke="#aa916a" stroke-width="1" opacity="0.5" style="opacity:0.5;animation-delay: 1.5s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1177.9081865778073" cy="30.06389889654605" r="10.682184219360352" fill="none" stroke="#eabe7c" stroke-width="1" opacity="0.45" style="opacity:0.45;animation-delay: 1.4s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="228.7296403873615" cy="333.6125756279868" r="11.689004898071289" fill="none" stroke="#322923" stroke-width="1" opacity="0.4" style="opacity:0.4;animation-delay: 1.7s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1712.7350241876645" cy="308.0302095822189" r="6.958776473999023" fill="none" stroke="#ABA9BB" stroke-width="1" opacity="0.35" style="opacity:0.35;animation-delay: 0.6s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="700.1316090674238" cy="138.87397536833979" r="13.142139434814453" fill="none" stroke="#E0F1F0" stroke-width="1" opacity="0.3" style="opacity:0.3;animation-delay: 0.7s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1521.211638264163" cy="188.4511444598811" r="14.517891883850098" fill="none" stroke="#aa916a" stroke-width="1" opacity="0.25" style="opacity:0.25;animation-delay: 1.1s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="176.04690883446156" cy="44.2773985329416" r="14.765962600708008" fill="none" stroke="#816f53" stroke-width="1" opacity="0.2" style="opacity:0.2;animation-delay: 0.1s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1078.858263801961" cy="341.6839175631896" r="13.68889331817627" fill="none" stroke="#cdb590" stroke-width="1" opacity="0.15" style="opacity:0.15;animation-delay: 0.2s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1227.7850648667052" cy="128.37684814157538" r="17.790943145751953" fill="none" stroke="#cdb590" stroke-width="1" opacity="0.1" style="opacity:0.1;animation-delay: 2.3s;animation-play-state:running" ></circle>
+<circle class="ld ld-speed-dash" cx="1814.636088360006" cy="52.2665235388735" r="13.879683494567871" fill="none" stroke="#322923" stroke-width="1" opacity="0.05" style="opacity:0.05;animation-delay: 2.0s;animation-play-state:running" ></circle></g></svg>

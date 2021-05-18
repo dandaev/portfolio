@@ -1,17 +1,11 @@
-import React, {useState} from 'react'
-import Video from '../../videos/dark.mp4';
-import {Button} from '../ButtonElements';
-// import Typing from 'react-typing-animation';
+import React, {useState,useEffect} from 'react'
+import Typewriter from 'typewriter-effect';
+// import image from '../../images/1.png'
+// import image2 from '../../images/2.png'
+// import image3 from '../../images/3.png'
+// import image4 from '../../images/4.png'
 import {
-    HeroContainer, 
-    HeroBg, 
-    VideoBg, 
-    HeroContent, 
-    HeroH1, 
-    HeroBtnWrapper, 
-    HeroText,
-    ArrowDown,
-    ArrowDownward,
+    HeroContainer,
 } from "./HeroElements"
 
 
@@ -22,50 +16,40 @@ const HeroSection = () => {
         setHover(!hover)
     }
 
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => setOffsetY(window.pageYOffset);
+
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll',handleScroll);
+    },[]);
+
     return (
+        
         <HeroContainer id='home'>
-            <HeroBg>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
-            </HeroBg>
-            <HeroContent>
-                <HeroH1>
-                    Hallo
-                    {/* <Typing speed={140} loop={false}>
-                        <span>Hello, </span>
-                        <Typing.Delay ms={600} />
-                        <Typing.Backspace count={6} />
-                        <Typing.Delay ms={100} />
-                        <span>allo, Ich bin </span>
-                        <Typing.Delay ms={7000} />
-                    </Typing>
-                    <Typing speed={120} loop = {true}>
-                            <span>Alybek!</span>
-                            <Typing.Delay ms={1000} />
-                            <Typing.Backspace count={8} />
-                            <span>Web Developer!</span>
-                            <Typing.Delay ms={1000} />
-                            <Typing.Backspace count={15} />
-                            <span>Student!</span>
-                            <Typing.Delay ms={1000} />
-                            <Typing.Backspace count={8} />
-                        </Typing> */}
-                </HeroH1>
-                <HeroText>
-                    Ich studiere an der WHZ
-                </HeroText>
-                <HeroBtnWrapper>
-                    <Button to='aboutme' 
-                    smooth = {true}
-                    duration={500}
-                    spy={true}
-                    exact = 'true'
-                    offset={-77}
-                    onMouseEnter={onHover} 
-                    onMouseLeave={onHover}>
-                    About Me {hover ? <ArrowDownward/> : <ArrowDown/>}
-                    </Button>
-                </HeroBtnWrapper>
-            </HeroContent>
+            {/* <HeroImgWrapper>
+                    <HeroImg src={image}/>
+                    <HeroImg src={image2}/>
+                    <HeroImg src={image3}/>
+                     <HeroImg src={image4}/>
+                </HeroImgWrapper> */}
+            {/*<HeroContent style={{ transform: `translateY(-${offsetY * 0.1}px)` }}>*/}
+            {/*    <HeroH1 >*/}
+            {/*        <span>Hallo, Ich bin</span> &nbsp;*/}
+            {/*        <Typewriter */}
+            {/*                options={{*/}
+            {/*                    strings: ['Alybek', 'Student', 'Full-Stack Entwickler'],*/}
+            {/*                    autoStart: true,*/}
+            {/*                    loop: true,*/}
+            {/*                    delay: 300,*/}
+            {/*                    deleteSpeed: 200,*/}
+            {/*                }}*/}
+            {/*        />*/}
+            {/*    </HeroH1>*/}
+            {/*    */}
+            {/*</HeroContent>*/}
+
         </HeroContainer>
     )
 }

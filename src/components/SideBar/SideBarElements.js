@@ -6,7 +6,7 @@ import {Link as LinkR} from 'react-router-dom';
 export const SideBarContainer = styled.aside`
     position: fixed;
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: #0d0d0d;
     display: grid;
@@ -84,10 +84,39 @@ export const SideBarRoute = styled(LinkR)`
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 
-    &:hover{
+    &:hover{ 
         transition: all 0.2s ease-in-out;
         background: #fff;
         color: #010606;
     }
 `;
 
+export const SideSocialNetBar = styled.ul`
+    display: none;
+
+    @media screen and (max-width: 768px){
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    }
+`;
+
+export const SideSocialNetItem = styled.li`
+    height: 80px;
+`;
+
+export const SideResouce = styled.a`
+     color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    
+    &:hover{
+        transition: all 0.3s ease-in-out;
+        color: #d4b8b6;
+    }
+`;

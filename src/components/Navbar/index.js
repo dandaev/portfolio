@@ -13,8 +13,10 @@ import {
     // NavBtnLink,
     NavSocialNetItem,
     NavSocialNetBar,
-    NavResouce
+    NavResouce,
+    LogoImg
 } from './NavBarElements'
+import {AnimArrow} from "../HeroSection/HeroElements";
 
 const Navbar = ({toggle}) => {
     const[scrollNav, setScrollNav] = useState(false)
@@ -41,34 +43,38 @@ const Navbar = ({toggle}) => {
                 <NavbarContainer>
                     <NavLogo onClick={toggleHome}>
                         Alybek.
+                        {/* <LogoImg></LogoImg> */}
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars size="32" />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to='aboutme' 
-                            smooth = {true}
-                            duration={500}
-                            spy={true}
-                            exact = 'true'
-                            offset={-80}>ABOUTME</NavLinks>
+                            <NavLinks   to='aboutme'
+                                        smooth = {true}
+                                        duration={1500}
+                                        spy={true}
+                                        delay={500}
+                                        exact = 'true'
+                                        offset={-80}>ABOUTME</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="portfolio"
-                            smooth = {true}
-                            duration={500}
-                            spy={true}
-                            exact = 'true'
-                            offset={-80}>PORTFOLIO</NavLinks>
+                            <NavLinks   to="portfolio"
+                                        smooth = {true}
+                                        duration={1500}
+                                        spy={true}
+                                        delay={500}
+                                        exact = 'true'
+                                        offset={-80}>PORTFOLIO</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="erfahrung"
-                            smooth = {true}
-                            duration={500}
-                            spy={true}
-                            exact = 'true'
-                            offset={-80}>ERFAHRUNG</NavLinks>
+                            <NavLinks   to="erfahrung"
+                                        smooth = {true}
+                                        duration={1500}
+                                        spy={true}
+                                        delay={500}
+                                        exact = 'true'
+                                        offset={-80}>ERFAHRUNG</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavSocialNetBar>

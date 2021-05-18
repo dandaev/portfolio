@@ -4,10 +4,12 @@ import {SideBarContainer,
     CloseIcon,
     SideBarWrapper, 
     SideBarMenu, 
-    SideBarLink, 
-    SideBtnWrap, 
-    SideBarRoute
+    SideBarLink,
+    SideSocialNetBar,
+    SideSocialNetItem,
+    SideResouce 
 } from './SideBarElements'
+import {FaLinkedin, FaGithub} from 'react-icons/fa'
 
 const SideBar = ({isOpen, toggle}) => {
     return (
@@ -45,9 +47,16 @@ const SideBar = ({isOpen, toggle}) => {
                         Erfahrung
                     </SideBarLink>
                 </SideBarMenu>
-                <SideBtnWrap>
-                    <SideBarRoute to="youtube.com">Contact Me</SideBarRoute>
-                </SideBtnWrap>
+                <SideSocialNetBar>
+                            <SideSocialNetItem>
+                                <SideResouce href='https://www.linkedin.com/in/alybek-dandaev-322482207/' target='_blank'><FaLinkedin/></SideResouce>
+                            </SideSocialNetItem>
+                            <SideSocialNetItem>
+                                <SideResouce href='https://github.com/dandaev' target='_blank'><FaGithub/></SideResouce>
+                            </SideSocialNetItem>
+                            <SideSocialNetItem>     
+                            </SideSocialNetItem>
+                        </SideSocialNetBar>
             </SideBarWrapper>
         </SideBarContainer>
     )

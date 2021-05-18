@@ -1,21 +1,23 @@
 import styled from "styled-components"
 import {Link as LinkR} from "react-router-dom"
 import {Link as LinkS} from "react-scroll"
+import Logo from '../../images/logo.svg'
+import {COLORS} from "../../common/Variables";
 
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => (scrollNav ? '#000':'transparent')};
+    background: ${({scrollNav}) => (scrollNav ? COLORS.dark :'transparent')};
     height: 80px;
-    /* margin-top: --80px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    position: sticky;
+    width: 100vw;
+    position: fixed;
     top: 0;
     z-index: 10;
-    font-family: 'IBM Plex Sans';
+    font-family: IBM Plex Sans,serif;
     font-size: 20px;
-    border-bottom: ${({scrollNav}) => (scrollNav ? '3px solid #555555':'0')};
+    // box-shadow: ${({scrollNav}) => (scrollNav ? '0 10px 17px rgba(52, 53, 64, 0.49)':'none')};
+
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
     }
@@ -32,7 +34,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-    color: #fff;
+    color: ${COLORS.third};
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -52,9 +54,9 @@ export const MobileIcon = styled.div`
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        font-size: 1,8rem;
+        font-size: 1.8rem;
         cursor: pointer;
-        color: #fff;
+        color: ${COLORS.third};
     }
 `;
 
@@ -75,7 +77,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-    color: #fff;
+    color:${COLORS.third};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -84,17 +86,18 @@ export const NavLinks = styled(LinkS)`
     cursor: pointer;
 
     &.active{
-        border-bottom: 3px solid #d4b8b6;
+        height: 100%;
+        border-bottom: 3px solid ${COLORS.dominant};
     }
 
     &:hover{
         transition: all 0.3s ease-in-out;
-        color: #d4b8b6;
+        color: ${COLORS.dominant};
     }
 `;
 
 export const NavResouce = styled.a`
-     color: #fff;
+     color: ${COLORS.third};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -104,7 +107,7 @@ export const NavResouce = styled.a`
     
     &:hover{
         transition: all 0.3s ease-in-out;
-        color: #d4b8b6;
+        color: ${COLORS.dominant};
     }
 `;
 
@@ -150,4 +153,13 @@ export const NavSocialNetBar = styled.ul`
 
 export const NavSocialNetItem = styled.li`
     height: 80px;
+`;
+
+export const LogoImg = styled.div`
+    background-image: url(${Logo});
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:transparent;
+    height: 80px;
+    width: 120px;
 `;

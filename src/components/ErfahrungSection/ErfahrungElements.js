@@ -10,11 +10,12 @@ export const ErfahrungContainer = styled.div`
     }
 `;
 export const ErfahrungWrapper = styled.div`
-   display: grid;
+    box-sizing: border-box;
+    display: grid;
     z-index: 1;
     height: 860px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 100vw;
     margin-right: auto;
     margin-left: auto;
     padding: 0 24px;
@@ -23,4 +24,11 @@ export const ErfahrungWrapper = styled.div`
 export const TESTER = styled.h1`
     margin-top: 400px;
     color: #f1f1f1;
+`;
+export const Svg = styled.svg`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
 `;
