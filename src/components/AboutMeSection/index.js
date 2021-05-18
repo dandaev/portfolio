@@ -16,25 +16,23 @@ import {
     Img  
 } from './AboutMeElements'
 
-const AboutMeSection = () => {
+const AboutMeSection = ({name,greetingText,passesionateText,portfolioText,locationText, location}) => {
     return (
         <>
             <AboutMeContainer id='aboutme'>
-                <AboutMeWrapper>
-                    <AboutMeRow>
+                {/*<AboutMeWrapper>*/}
+                    <AboutMeRow >
                         <Column1>
                             <TextWrapper>
-                                <TitleLine>
-                                   TitleLine
-                                </TitleLine>
-                                <Heading> Heading </Heading>
-                                <TextLine>
-                                    Nunquam fallere idoleum.
-                                    To the ripe caviar add onion, butter, orange juice and quartered squid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
-                                    aperiam architecto, aut autem blanditiis consequatur consequuntur dolor illum minima non quia quidem quisquam repellendus sunt tenetur vel, velit, vero?
-                                </TextLine>
+                                {/*<TitleLine>*/}
+                                {/*   TitleLine*/}
+                                {/*</TitleLine>*/}
+                                <Heading> {name} </Heading>
+                                <TextLine> {passesionateText} </TextLine>
+                                <TextLine> {greetingText} </TextLine>
+                                <TextLine> {locationText}  {location}</TextLine>
                                 <AboutMeBtnWrapper>
-                                    <Button to='home'>Button</Button>
+                                    <Button to='home'>{portfolioText}</Button>
                                 </AboutMeBtnWrapper>
                             </TextWrapper>
                         </Column1>
@@ -44,7 +42,7 @@ const AboutMeSection = () => {
                             </ImgWrapper>
                         </Column2>
                     </AboutMeRow>
-                </AboutMeWrapper>
+                {/*</AboutMeWrapper>*/}
             </AboutMeContainer>
         </>
     )

@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
-export const PortfolioContainer = styled.div`
+export const PortfolioContainer = styled.section`
     color: #fff;
-    background-color: transparent;
+    background-color: cadetblue;
+    position: relative;
+    display: flex;
     height: 900px;
     overflow-x:hidden;
 

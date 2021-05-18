@@ -1,70 +1,71 @@
 import styled from 'styled-components'
-import BgImage from '../../images/aboutMeContainer.svg'
+import {COLORS} from "../../common/Variables";
 
-export const AboutMeContainer = styled.section`
+export const AboutMeContainer = styled.div`
     color: #fff;
-    background: rgba(52,53,64);
-    //background-image: url(${BgImage});
-    //background-repeat: no-repeat;
-    position: absolute;
+    background: rgb(52,53,64);
+    background: linear-gradient(149deg, rgba(182,179,237,1) 0%, rgba(90,93,117,1) 24%, rgba(52,53,64,1) 100%);
     width: 100vw;
     height: 100vh;
+    padding-top: 15vh;
     z-index: 1;
     @media screen and (max-width: 768px){
         padding:100px 0;
     }
 `;
 
-export const AboutMeWrapper = styled.div`
-    display: grid;
-    background: rgba(90,93,117);
-    z-index: 1;
-    height: 70vh;
-    margin-top: 10vh;
-    width: 90vw;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0;
-    justify-content: center;
-`;
-
 export const AboutMeRow = styled.div`
+  height: 70vh;
+  width: 70vw;
+  margin-right: auto;
+  margin-left: auto;
   display: grid;
-  background: rgb(104,107,136);
+  background: rgb(43,146,142);
+  background: linear-gradient(166deg, rgba(161,161,161,1) 4%, rgba(218,247,244,1) 54%, rgba(69,71,88,1) 90%);
+  border-radius: 7vh;
   grid-auto-columns: 3fr 7fr;
-  //grid-template-columns: 7fr 3fr;
-  //grid-auto-flow: dense;
   align-items: center;
-  width: 100%;
-    grid-template-areas: 'col2 col1';
-
+  grid-template-areas: 'col2 col1';
+  font-size: 100px;
+  &:hover{
+    transition: all 0.5s ease-in-out;
+    //height: 80vh;
+    //width: 95vw;
+    box-shadow: 0 0 83px -20px rgba(0, 0, 0, 0.9);
+  };
     @media screen and (max-width: 768px) {
-        grid-template-areas: 'col1 col1' 'col2 col2';
-      //grid-template-columns: 1fr;
+      font-size: 69px;
+      width: 100vw;
+      grid-template-areas: 'col1 col1' 'col2 col2';
     }
 `;
 
 export const Column1 = styled.div`
     height: 100%;
-    padding: 0 15px;
+    width: 100%;
+    padding: 0 ;
+    overflow: hidden;
     grid-area: col1;
-    box-shadow: -20px 0 10px 0 rgba(0, 0, 0, 0.49);
-  z-index: 6;
+    z-index: 6;
+    font-size: 100%;
 `;
 
 export const Column2 = styled.div`
     height: 100%;
+    width: 100%;
+    overflow: hidden;
+    //border-radius: 7vh;
     grid-area: col2;
 `;
 
 export const TextWrapper = styled.div`
     max-width: 90%;
-    padding-top: 0;
-    padding-bottom: 60px;
+    max-height: 80%;
+    padding: 5% 20% 10% 10%;
 `;
 
 export const TitleLine = styled.p`
-    color: #d4b8b6;
+    color: #5C586E;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -75,10 +76,14 @@ export const TitleLine = styled.p`
 
 export const Heading = styled.h1`
     margin-bottom: 24px;
-    font-size: 48px;
-    line-height: 1.1;
-    font-weight: 600;
-    color: ${({ lightText }) => (lightText ? '#f7f8fa' : '010606')};
+    font-size: 40%;
+    //line-height: 1.1;
+    font-weight: 700;
+    background-color: ${COLORS.darkHeading1};
+    background-image: linear-gradient(-5deg, ${COLORS.darkHeading1} 10%, ${COLORS.darkHeading2} 89%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     @media screen and (max-width: 480px){
         font-size: 32px;
@@ -87,10 +92,8 @@ export const Heading = styled.h1`
 
 export const TextLine = styled.p`
     max-width: 100%;
-    margin-bottom: 35px;
-    font-size: 18px;
-    line-height: 24px;
-    color: #fff;
+    font-size: 23%;
+    color: ${COLORS.darkText};
 `;
 
 export const AboutMeBtnWrapper = styled.div`
@@ -100,11 +103,20 @@ export const AboutMeBtnWrapper = styled.div`
 
 export const ImgWrapper = styled.div`
     max-width: 555px;
+    overflow: hidden;
+    width: 100%;
     height: 100%;
+  &:hover{
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 83px -20px rgba(0, 0, 0, 0.9);
+  };
 `;
 
 export const Img = styled.img`
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-bottom-left-radius: 7vh;
+    border-top-left-radius: 7vh;
     object-fit: cover;
 `;

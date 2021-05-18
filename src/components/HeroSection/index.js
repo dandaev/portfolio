@@ -5,13 +5,7 @@ import Typewriter from 'typewriter-effect';
 // import image3 from '../../images/3.png'
 // import image4 from '../../images/4.png'
 import {
-    HeroContainer, 
-    HeroContent, 
-    HeroH1, 
-    HeroBtnWrapper, 
-    Arrow,
-    AnimArrow,
-    ArrowText,
+    HeroContainer,
 } from "./HeroElements"
 
 

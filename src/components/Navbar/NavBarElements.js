@@ -2,23 +2,21 @@ import styled from "styled-components"
 import {Link as LinkR} from "react-router-dom"
 import {Link as LinkS} from "react-scroll"
 import Logo from '../../images/logo.svg'
+import {COLORS} from "../../common/Variables";
 
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => (scrollNav ? '#000':'transparent')};
-    /* height: ${({scrollNav}) => (scrollNav ? '60px':'80px')}; */
+    background: ${({scrollNav}) => (scrollNav ? COLORS.dark :'transparent')};
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    font-size: 1rem;
     position: fixed;
     top: 0;
     z-index: 10;
-    font-family: 'IBM Plex Sans';
-    /* font-size: ${({scrollNav}) => (scrollNav ? '18px':'20px')}; */
+    font-family: IBM Plex Sans,serif;
     font-size: 20px;
-    box-shadow: ${({scrollNav}) => (scrollNav ? '0 10px 17px rgba(0, 0, 0, 0.49)':'none')};
+    // box-shadow: ${({scrollNav}) => (scrollNav ? '0 10px 17px rgba(52, 53, 64, 0.49)':'none')};
 
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
@@ -36,7 +34,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-    color: #fff;
+    color: ${COLORS.third};
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -58,7 +56,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #fff;
+        color: ${COLORS.third};
     }
 `;
 
@@ -79,7 +77,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-    color: #fff;
+    color:${COLORS.third};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -89,17 +87,17 @@ export const NavLinks = styled(LinkS)`
 
     &.active{
         height: 100%;
-        border-bottom: 3px solid #B6B3ED;
+        border-bottom: 3px solid ${COLORS.dominant};
     }
 
     &:hover{
         transition: all 0.3s ease-in-out;
-        color: #B6B3ED;
+        color: ${COLORS.dominant};
     }
 `;
 
 export const NavResouce = styled.a`
-     color: #fff;
+     color: ${COLORS.third};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -109,7 +107,7 @@ export const NavResouce = styled.a`
     
     &:hover{
         transition: all 0.3s ease-in-out;
-        color: #B6B3ED;
+        color: ${COLORS.dominant};
     }
 `;
 

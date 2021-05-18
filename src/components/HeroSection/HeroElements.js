@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import {Link} from 'react-scroll';
+import {COLORS} from '../../common/Variables'
 
 export const HeroContainer = styled.div`
-    background: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+  bottom: 0;
     height: 100vh;
     z-index: 1; 
     background-color:transparent;
@@ -14,11 +15,12 @@ export const HeroContainer = styled.div`
 `;
 export const HeroContent = styled.div`
     max-width: 1200px;
+  //display: none;
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 20%;
     right: 50%;
-    bottom: 65%;
+    bottom: 80%;
     transform: translate(-50%, -50%);
     padding: 8px 24px;
     margin-bottom: 186px;
@@ -32,8 +34,13 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-    color: rgba(104,107,136);
-    font-size: 60px;
+    //color: rgba(104,107,136);
+    font-size: 69px;
+      background-color: ${COLORS.dark};
+      background-image: linear-gradient(0deg, ${COLORS.dark} 10%, ${COLORS.third} 89%);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     text-align: center;
     mix-blend-mode: overlay;
     display: flex;
@@ -108,7 +115,7 @@ export const HeroBtnWrapper = styled.div`
     bottom: 69px;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
+    z-index: 0;
      /* @media screen and (max-width: 480px){
         width:25px;
     }  */
@@ -118,7 +125,6 @@ export const AnimArrow = styled(Link)`
     position: absolute;
     width: 100%;
     left:50%;
-    width:100%;
     z-index: -1;
     transform: translate(-50%,-50%);
     span:nth-child(2){
