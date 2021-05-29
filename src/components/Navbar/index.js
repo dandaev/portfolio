@@ -2,19 +2,18 @@ import React, {useState, useEffect} from 'react'
 import {FaBars, FaLinkedin, FaGithub} from 'react-icons/fa'
 import {animateScroll as scroll} from 'react-scroll'
 import {
-    Nav, 
-    NavbarContainer, 
-    NavLogo, 
-    MobileIcon, 
-    NavMenu, 
-    NavItem, 
+    Nav,
+    NavbarContainer,
+    NavLogo,
+    MobileIcon,
+    NavMenu,
+    NavItem,
     NavLinks,
     // NavBtn,
     // NavBtnLink,
     NavSocialNetItem,
     NavSocialNetBar,
-    NavResouce,
-    LogoImg
+    NavResouce, NavBtn, NavBtnLink,
 } from './NavBarElements'
 import {AnimArrow} from "../HeroSection/HeroElements";
 
@@ -43,8 +42,14 @@ const Navbar = ({toggle}) => {
                 <NavbarContainer>
                     <NavLogo onClick={toggleHome}>
                         Alybek.
+                        <NavBtn>
+                            <NavBtnLink>
+                                Beta
+                            </NavBtnLink>
+                        </NavBtn>
                         {/* <LogoImg></LogoImg> */}
                     </NavLogo>
+
                     <MobileIcon onClick={toggle}>
                         <FaBars size="32" />
                     </MobileIcon>
@@ -56,26 +61,26 @@ const Navbar = ({toggle}) => {
                                         spy={true}
                                         delay={500}
                                         exact = 'true'
-                                        offset={-80}>ABOUTME</NavLinks>
+                                        offset={-80}>Über mich</NavLinks>
                         </NavItem>
-                        <NavItem>
-                            <NavLinks   to="portfolio"
-                                        smooth = {true}
-                                        duration={1500}
-                                        spy={true}
-                                        delay={500}
-                                        exact = 'true'
-                                        offset={-80}>PORTFOLIO</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks   to="erfahrung"
-                                        smooth = {true}
-                                        duration={1500}
-                                        spy={true}
-                                        delay={500}
-                                        exact = 'true'
-                                        offset={-80}>ERFAHRUNG</NavLinks>
-                        </NavItem>
+                        {/*<NavItem>*/}
+                        {/*    <NavLinks   to="portfolio"*/}
+                        {/*                smooth = {true}*/}
+                        {/*                duration={1500}*/}
+                        {/*                spy={true}*/}
+                        {/*                delay={500}*/}
+                        {/*                exact = 'true'*/}
+                        {/*                offset={-80}>PORTFOLIO</NavLinks>*/}
+                        {/*</NavItem>*/}
+                        {/*<NavItem>*/}
+                        {/*    <NavLinks   to="erfahrung"*/}
+                        {/*                smooth = {true}*/}
+                        {/*                duration={1500}*/}
+                        {/*                spy={true}*/}
+                        {/*                delay={500}*/}
+                        {/*                exact = 'true'*/}
+                        {/*                offset={-80}>ERFAHRUNG</NavLinks>*/}
+                        {/*</NavItem>*/}
                     </NavMenu>
                     <NavSocialNetBar>
                             <NavSocialNetItem>

@@ -29,7 +29,10 @@ export const HeroContent = styled.div`
     align-items: center;
     z-index: -4;
     @media screen and (max-width: 768px){
-        margin-bottom: 500px;
+        left: 50%;
+        top: 40%;
+        right: 50%;
+        bottom: 60%;
     }
 `;
 
@@ -37,21 +40,24 @@ export const HeroH1 = styled.h1`
     //color: rgba(104,107,136);
     font-size: 69px;
       background-color: ${COLORS.dark};
-      background-image: linear-gradient(0deg, ${COLORS.dark} 10%, ${COLORS.third} 89%);
+      background-image: linear-gradient(0deg, ${COLORS.lightHeading1} 10%, ${COLORS.lightHeading2} 89%);
       background-size: 100%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     text-align: center;
     mix-blend-mode: overlay;
-    display: flex;
-    white-space: nowrap;
+    hyphens: auto;
+    //display: inline-flex;
+    min-width: 90vw;
     
     @media screen and (max-width: 768px){
         font-size: 40px;
+        display: initial;
     }
 
     @media screen and (max-width: 480px){
         font-size: 32px;
+        display: initial;
     }
 `;
 
