@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {FaBars, FaLinkedin, FaGithub} from 'react-icons/fa'
+import {FaBars, FaLinkedin, FaGithub,  FaFacebook, FaTelegram} from 'react-icons/fa'
 import {animateScroll as scroll} from 'react-scroll'
 import {
     Nav,
@@ -90,7 +90,10 @@ const Navbar = ({toggle}) => {
                                 <NavResouce href='https://github.com/dandaev' target='_blank'><FaGithub/></NavResouce>
                             </NavSocialNetItem>
                             <NavSocialNetItem>
-                                
+                                <NavResouce href='https://t.me/dandaev' target='_blank'><FaTelegram/></NavResouce>
+                            </NavSocialNetItem>
+                            <NavSocialNetItem>
+                                <NavResouce href='https://www.facebook.com/profile.php?id=100010958942979' target='_blank'><FaFacebook/></NavResouce>
                             </NavSocialNetItem>
                         </NavSocialNetBar>
                     {/* <NavBtn>

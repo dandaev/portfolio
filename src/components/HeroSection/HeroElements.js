@@ -7,14 +7,15 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0;
-  bottom: 0;
+    bottom: 0;
+    width: 100vw;
     height: 100vh;
     z-index: 1; 
     background-color:transparent;
     /* Add : before */
 `;
 export const HeroContent = styled.div`
-    max-width: 1200px;
+    max-width: 100vw;
   //display: none;
     position: absolute;
     left: 50%;
@@ -30,9 +31,9 @@ export const HeroContent = styled.div`
     z-index: -4;
     @media screen and (max-width: 768px){
         left: 50%;
-        top: 40%;
+        top: 35%;
         right: 50%;
-        bottom: 60%;
+        bottom: 65%;
     }
 `;
 
@@ -51,12 +52,12 @@ export const HeroH1 = styled.h1`
     min-width: 90vw;
     
     @media screen and (max-width: 768px){
-        font-size: 40px;
+        font-size: 50px;
         display: initial;
     }
 
     @media screen and (max-width: 480px){
-        font-size: 32px;
+        font-size: 40px;
         display: initial;
     }
 `;

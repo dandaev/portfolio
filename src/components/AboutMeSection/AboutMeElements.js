@@ -10,6 +10,13 @@ export const AboutMeContainer = styled.div`
     padding-top: 15vh;
     z-index: 1;
     letter-spacing: 1.2px;
+    @media screen and (max-width: 480px){
+        width: 100vw;
+        padding-top: 2vh !important;
+        height: auto;
+        background: linear-gradient(to right bottom, #afb0b2, #b0b3b6, #b1b6ba, #b1b9be, #b1bcc1, #b4c2c7, #b8c8cc, #bbced1, #c2d8da, #cae2e3, #d2edec, #daf7f4);
+
+    }
     @media screen and (max-width: 768px) {
         padding: 100px 0;
     }
@@ -30,7 +37,12 @@ export const AboutMeRow = styled.div`
     font-size: 100px;
     border-bottom: ${COLORS.dark};
     border-bottom-style: solid;
-
+    @media screen and (max-width: 480px){
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        border-bottom: none;
+    }
     //&:hover {
     //    transition: all 0.5s ease-in-out;
     //    //height: 80vh;
@@ -52,9 +64,7 @@ export const Column1 = styled.div`
     height: 100%;
     width: 100%;
     padding: 0;
-    overflow: hidden;
     grid-area: col1;
-    border-left-width: 2px;
     font-size: 100%;
 `;
 
@@ -64,18 +74,20 @@ export const Column2 = styled.div`
     overflow: hidden;
     //border-radius: 7vh;
     grid-area: col2;
+    @media screen and (max-width: 480px){
+        width: 94vw;
+        padding: 0 3% 0 3%;
+    }
+    
 `;
 
 export const TextWrapper = styled.div`
-    max-width: 90%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
     align-items: center;
     padding: 5% 20% 10% 10%;
-    @media screen and (max-width: 768px) {
-        padding: 5% 20% 10% 10%;
-    }
-    @media screen and (max-width: 1300px) {
-        padding: 5% 10% 10% 10%;
+    @media screen and (max-width: 480px){
+        padding: 0 3% 0 3%;
     }
 `;
 
@@ -111,6 +123,9 @@ export const ContactItemsWrapper = styled.div`
     align-items: center;
     display: list-item;
     list-style-type: none;
+    @media screen and (max-width: 480px){
+        width: 100%;
+    }
 `;
 
 export const ContactItem = styled.li`
@@ -119,6 +134,9 @@ export const ContactItem = styled.li`
     font-size: 1.2rem;
     color: ${COLORS.aboutMeTextDark};
     list-style-type: none;
+    @media screen and (max-width: 480px){
+        font-size: 1rem;
+    }
 `;
 
 export const TextLine = styled.p`
@@ -140,7 +158,6 @@ export const ImgWrapper = styled.div`
     bottom: 0;
     width: 100%;
     height: 100%;
-
 `;
 
 export const Img = styled.img`
