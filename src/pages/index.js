@@ -51,8 +51,6 @@ const Home = () => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-
     return (
         <>
             <SideBar isOpen={isOpen} toggle={toggle}/>
@@ -62,16 +60,36 @@ const Home = () => {
             <SvgBg2 style={{transform: `translateY(${offsetY * 0.28}px)`}}/>
             <SvgBg1 style={{transform: `translateY(${offsetY * 0.0001}px)`}}/>
             <HeroContent style={{transform: `translateY(${offsetY * 2.3}px)`}}>
-                <HeroH1>
-                    <span>Hallo, Ich bin</span> &nbsp;
+                <HeroH1 id='heroText'>
+                    {/*<span style={{whiteSpace: 'nowrap'}}>Hallo, Ich bin</span> &nbsp;*/}
                     <Typewriter
                         options={{
-                            strings: ['Alybek', 'Student', 'Full-Stack Entwickler'],
-                            autoStart: true,
-                            loop: true,
-                            delay: 300,
-                            deleteSpeed: 200,
+                            loop:true,
+                            autoStart: true
                         }}
+                        onInit={(typewriter) => {
+                            typewriter
+                                .changeDelay(150)
+                                .typeString("Hallo")
+                                .pauseFor(500)
+                                .typeString(", ich bin Alybek")
+                                .deleteAll(100)
+                                .typeString("Ich bin Student")
+                                .pauseFor(1200)
+                                .deleteAll(100)
+                                .changeDelay(100)
+                                .typeString("Und Webentwickler")
+                                .pauseFor(4000)
+                                .deleteAll(100)
+                                .start()
+                        }}
+                        // options={{
+                        //     strings: ['Alybek', 'Student', 'Full-Stack Entwickler'],
+                        //     autoStart: true,
+                        //     loop: true,
+                        //     delay: 300,
+                        //     deleteSpeed: 200,
+                        // }}
                     />
                 </HeroH1>
             </HeroContent>
@@ -101,7 +119,7 @@ const Home = () => {
             {/*<ErfahrungSection/>*/}
             <HeroSection/>
             <AboutMeSection {...aboutMeContentDE}/>
-            <PortfolioSection/>
+            {/*<PortfolioSection/>*/}
         </>
     );
 };

@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import {Link as LinkR} from "react-router-dom"
 import {Link as LinkS} from "react-scroll"
-import Logo from '../../images/logo.svg'
 import {COLORS} from "../../common/Variables";
 
 export const Nav = styled.nav`
@@ -84,7 +83,9 @@ export const NavLinks = styled(LinkS)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-
+    font-weight: 500;
+    text-transform: uppercase;
+    
     &.active{
         height: 100%;
         border-bottom: 3px solid ${COLORS.dominant};
@@ -114,22 +115,23 @@ export const NavResouce = styled.a`
 export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
-
+    margin-left: 1em;
     @media screen and (max-width: 768px){
-        display: none;
+        
     }
 `;
 
 export const NavBtnLink = styled(LinkR)`
     border-radius: 50px;
-    background: #636363;
+    background: #E8B9D3;
     white-space: nowrap;
-    padding: 10px 22px;
+    padding: 5px 10px;
     color: #010606;
     font-size: 16px;
     outline: none;
     border: none;
     cursor:pointer;
+    pointer-events: none;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 
@@ -156,7 +158,6 @@ export const NavSocialNetItem = styled.li`
 `;
 
 export const LogoImg = styled.div`
-    background-image: url(${Logo});
     background-repeat: no-repeat;
     background-size:cover;
     background-color:transparent;

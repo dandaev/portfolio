@@ -2,16 +2,17 @@ import styled from 'styled-components';
 import {FaTimes} from 'react-icons/fa';
 import {Link as LinkS} from 'react-scroll';
 import {Link as LinkR} from 'react-router-dom';
+import {COLORS} from "../../common/Variables";
 
 export const SideBarContainer = styled.aside`
     position: fixed;
     z-index: 999;
     width: 100vw;
     height: 100%;
-    background: #0d0d0d;
+    background: ${COLORS.dark};
     display: grid;
     align-items: center;
-    top: 0;
+    font-family: IBM Plex Sans,serif;
     left: 0;
     transition: 0.3s ease-in-out;
     opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
@@ -40,11 +41,13 @@ export const SideBarWrapper = styled.div`
 export const SideBarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 80px);
+    grid-template-rows: repeat(auto-fill, 80px);
     text-align: center;
-
+    padding: 0;
+    text-transform: uppercase;
+    
     @media screen and (max-width: 480px){
-        grid-template-rows: repeat(6, 60px);
+        grid-template-rows: repeat(auto-fitt, 60px);
     }
 `
 
@@ -56,8 +59,7 @@ export const SideBarLink = styled(LinkS)`
     text-decoration: none;
     list-style: none;
     transition: 0.2s ease-in-out;
-    text-decoration: none;
-    color: #fff;
+    color: ${COLORS.third};
     cursor: pointer;
 
     &:hover{
@@ -99,11 +101,16 @@ export const SideSocialNetBar = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
+        padding: 0 3vh;
     }
 `;
 
 export const SideSocialNetItem = styled.li`
-    height: 80px;
+    height: 10vh;
+    width: auto;
+    display: table;
+    margin:0 auto 0 auto;
+    align-items: center;
 `;
 
 export const SideResouce = styled.a`
@@ -113,6 +120,7 @@ export const SideResouce = styled.a`
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
+    width: auto;
     cursor: pointer;
     
     &:hover{

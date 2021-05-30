@@ -58,8 +58,9 @@ export const Clouds = styled.div`
   position:absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width:100%;
+    bottom: 0;
+  height: 100vh;
+  width:100vw;
   overflow: hidden;
   z-index: -1;
   img:nth-child(1){
@@ -93,5 +94,8 @@ export const Cloud = styled.img`
         transform: translateX(100%);
       }
   }
+    @media screen and (max-width: 480px){
+        bottom: 0;
+    }
 `;
 
